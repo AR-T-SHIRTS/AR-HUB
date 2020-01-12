@@ -39,20 +39,66 @@
         
         <title>ARHub | selector </title>
 </head>
-<body>
+<body class="center-cont">
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <!-- menu -->
+            </div>
+            <div class="col-6 text-right p-3 d-sm-none">
+                <a href="./index.html"> 
+                <img src="./static/image/logo_05x.png" alt="model preview" style="max-width: 50%; height: auto;" class="img-fluid ">
+                </a>
+            </div>
 
-    <!-- "menu" inferior -->
-    <!-- 
-    <nav class="navbar navbar-light bg-light justify-content-around
-        fixed-bottom border-top p-4 m-2 ">
+            <div class="col-6 text-right p-3 d-none d-sm-block">
+                <a href="./index.html"> 
+                <img src="./static/image/logo_05x.png" alt="model preview" style="max-width: 20%; height: auto;" class="img-fluid ">
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- aquí va el contenido -->    
+    <section class="container-fluid ">
+        
+        <!-- preview -->
+        <div class="row justify-content-center p-3 py-5 ">
+            <div class="col-6 p-3 text-right ">
+                <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 70%; height: auto;" class="img-fluid img-thumbnail ">
+            </div>
+            <div class="col-6 p-3 text-left ">
+                <img src="./static/image/noimage.png" alt="model preview" style="max-width: 70%; height: auto;" class="img-fluid img-thumbnail">
+            </div>
+        </div>
 
-        <button class="btn btn-primary btn-block" type="button">markers</button>
+        <!-- aquí va la info -->
+        <div class="row my-3 justify-content-center px-5">
+            <div class="col-sm-12 col-md-6 ">
+                <form style="z-index: 1000;">
+                    <div class="form-group">
+                      <input type="text" class="form-control border m-2" id="formGroupExampleInput" placeholder="Object name ...">
+                      <textarea class="form-control m-2" id="exampleFormControlTextarea1" placeholder="Write a description" rows="3" ></textarea>  
+                      <button type="submit" class="btn btn-success btn-block m-2">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
-        <button class="btn btn-secondary btn-block" type="button">models</button>
-
-        <button class="btn btn-info btn-block" type="button"> view display</button>
-    </nav>
-
+    </section>
+    <!-- hasta aquí el contenido -->
+    <footer class="container-fluid font-weight-bolder  pb-0" style="z-index: 1;">
+        <div class="row pb-0">
+            <div class="col-4 m-0 p-0 ">
+                <button class="btn btn-dark btn-block pb-4" type="button">markers</button>
+            </div>
+            <div class="col-4 m-0 p-0">
+                <button class="btn btn-secondary btn-block pb-4" type="button">models</button>
+            </div>
+            <div class="col-4 m-0 p-0">
+                <button class="btn btn-dark text-white btn-block pb-4" type="button"> view display</button>
+            </div>
+        </div>
+    </footer>
 
     <script>
         function openNav() {
@@ -63,7 +109,6 @@
             document.getElementById("mySidenav").style.width = "0";
         }
     </script>
-     -->
 </body>
 
 </html>
