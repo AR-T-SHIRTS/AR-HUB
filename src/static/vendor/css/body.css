@@ -1,0 +1,19 @@
+html {
+    font-family: 'Montserrat', sans-serif ;
+}
+
+.center-cont {
+    background: rgb(255,247,227);
+    background: linear-gradient(177deg, rgba(255,247,227,1) 0%, rgba(255,189,56,1) 100%);
+
+}
+.shbot{
+    -webkit-box-shadow: 0px 19px 14px 0px rgba(0,0,0,0.27);
+    -moz-box-shadow: 0px 19px 14px 0px rgba(0,0,0,0.27);
+    box-shadow: 0px 19px 14px 0px rgba(0,0,0,0.27);
+}
+.shtop{
+    -webkit-box-shadow: 0px -9px 14px 0px rgba(0,0,0,0.27);
+    -moz-box-shadow: 0px -9px 14px 0px rgba(0,0,0,0.27);
+    box-shadow: 0px -9px 14px 0px rgba(0,0,0,0.27);
+}
