@@ -1,14 +1,15 @@
 {
-  "name": "ar-hub",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "firebase": "^7.6.2"
-  }
+	"name": "ar-hub",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "firebase serve"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"firebase": "^7.6.2"
+	}
 }
