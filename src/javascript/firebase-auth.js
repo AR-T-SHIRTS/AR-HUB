@@ -36,6 +36,7 @@ function submitSignIn(e) {
     });
 
     const user = firebase.auth().currentUser;
+    user.
     if(user.emailVerified){
 
         document.getElementById("start").classList.remove('d-none')
