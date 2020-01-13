@@ -14,7 +14,7 @@ firebase.initializeApp(firebaseConfig);
 //event listener
 document.getElementById('signup').addEventListener('submit', submitSignUp)
 document.getElementById('signin').addEventListener('submit', submitSignIn)
-
+document.getElementById('google').addEventListener('click', googleSignIn)
 function submitSignIn(e) {
     e.preventDefault();
 
@@ -26,6 +26,18 @@ function submitSignIn(e) {
     promise
     .then(user => console.log(user))
     .catch(e=> console.log(e.message));
+}
+
+googleSignIn = () => {
+  base_provider = new firebase.auth.GoogleAuthProvider()
+  firebase.auth.signInWithPopup(base_provider)
+  .then(function(result){
+    console.log(result)
+    console.log("Success Google Account Linked")
+  }).catch(function(error){
+    console.log(err)
+    console.log("Failed authentication")
+  })
 }
 
 
@@ -55,7 +67,6 @@ function validatePassword(){
     confirm_password.setCustomValidity('');
   }
 }
-
 
 password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;

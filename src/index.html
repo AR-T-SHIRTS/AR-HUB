@@ -18,7 +18,6 @@
         <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.5/aframe/build/aframe-ar.js"></script>
         
         
-
     <!-- update the version number as needed -->
         <script defer src="/__/firebase/7.6.2/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -27,8 +26,12 @@
         <script defer src="/__/firebase/7.6.2/firebase-messaging.js"></script>
         <script defer src="/__/firebase/7.6.2/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
-        <script defer src="/__/firebase/init.js"></script>        
-        <title>ARHub | Home</title>
+        <script defer src="/__/firebase/init.js"></script>   
+        
+        
+    <!-- our authentication -->
+    <script defer src="./javascript/landing-auth.js"></script>
+    <title>ARHub | Home</title>
 </head>
 <body class="center-cont">
   
@@ -131,11 +134,18 @@
           <div class="modal-body">
             <div class="form-group">
               <label for="email">Email</label>
+              <label for="email" class="text-danger" id="error"></label>
               <input type="email" class="form-control" id="email">
             </div>
             <div class="form-group">
               <label for="password">Password</label>
               <input type="password" class="form-control" id="password">
+            </div>
+            <div class="form-group justify-content-center">
+                <label for="email">Or:</label>
+                <button class="btn btn-link btn-lg p-2 m-3 border" 
+                        id="google"
+                        >Sign in with Google</button>     
             </div>
           </div>
           <div class="modal-footer">
@@ -151,8 +161,12 @@
 
 
   <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
-  <script src="./javascript/firebase-auth.js"></script>
-  </body>
+  
+  <script>
+    
+  </script>    
+
+</body>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 
 </html>
