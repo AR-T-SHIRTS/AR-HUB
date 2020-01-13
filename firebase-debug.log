@@ -1,0 +1,39 @@
+[debug] [2020-01-13T10:51:47.535Z] ----------------------------------------------------------------------
+[debug] [2020-01-13T10:51:47.537Z] Command:       /usr/local/bin/firebase /home/pablo/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase serve
+[debug] [2020-01-13T10:51:47.537Z] CLI Version:   7.11.0
+[debug] [2020-01-13T10:51:47.537Z] Platform:      linux
+[debug] [2020-01-13T10:51:47.537Z] Node Version:  v10.17.0
+[debug] [2020-01-13T10:51:47.538Z] Time:          Mon Jan 13 2020 10:51:47 GMT+0000 (Western European Standard Time)
+[debug] [2020-01-13T10:51:47.538Z] ----------------------------------------------------------------------
+[debug] [2020-01-13T10:51:47.538Z] 
+[debug] [2020-01-13T10:51:47.549Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-13T10:51:47.549Z] > authorizing via signed-in user
+[debug] [2020-01-13T10:51:47.549Z] [iam] checking project ar-hub-6c9e7 for permissions ["firebase.projects.get"]
+[debug] [2020-01-13T10:51:47.551Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/ar-hub-6c9e7:testIamPermissions  
+
+[debug] [2020-01-13T10:51:48.804Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-13T10:51:48.807Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/ar-hub-6c9e7  
+ 
+[debug] [2020-01-13T10:51:49.436Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/pablo/Programacion/Web/AR-HUB'...
+[info] 
+[debug] [2020-01-13T10:51:49.445Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/ar-hub-6c9e7/webApps/-/config  
+ 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "10"
+[info] ✔  functions: Emulator started at http://localhost:5001
+[debug] [2020-01-13T10:51:50.172Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "/home/pablo/Programacion/Web/AR-HUB/functions" for Cloud Functions...
+[debug] [2020-01-13T10:51:50.210Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-01-13T10:51:50.211Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-01-13T10:51:50.211Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-01-13T10:51:50.212Z] [worker-~diagnostic~-d5315d26-be98-4a31-9cb4-4d3116121513]: Assigning socketPath: /tmp/fire_emu_30272.sock
+[debug] [2020-01-13T10:51:50.213Z] [worker-~diagnostic~-d5315d26-be98-4a31-9cb4-4d3116121513]: BUSY
+[info] i  hosting: Serving hosting files from: src
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2020-01-13T10:51:50.736Z] [runtime-status] [30272] Functions runtime initialized. {"cwd":"/home/pablo/Programacion/Web/AR-HUB/functions","node_version":"10.17.0"}
+[debug] [2020-01-13T10:51:50.738Z] [runtime-status] [30272] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-admin" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2020-01-13T10:51:50.759Z] [worker-~diagnostic~-d5315d26-be98-4a31-9cb4-4d3116121513]: exited
+[debug] [2020-01-13T10:51:50.760Z] [worker-~diagnostic~-d5315d26-be98-4a31-9cb4-4d3116121513]: FINISHED

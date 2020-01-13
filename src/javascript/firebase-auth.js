@@ -18,15 +18,24 @@ document.getElementById('signin').addEventListener('submit', submitSignIn)
 function submitSignIn(e) {
     e.preventDefault();
 
-    var email = getInputVal('email');
-    var password = getInputVal('password');
+    var email = getInputVal('emails');
+    var password = getInputVal('passwords');
     const auth = firebase.auth();
 
+
     const promise = auth.signInWithEmailAndPassword(email, password);
-    promise
-    .then(user => console.log(user))
-    .catch(e=> console.log(e.message));
+    promise.catch(function (e){
+        console.log(e.message);
+        return 0;
+    });
+
+    var user = firebase.auth().currentUser;
+    if(user != null){
+        window.location = 'models_and_markers.html';
+    }
 }
+
+
 
 
 function submitSignUp(e) {
@@ -37,8 +46,10 @@ function submitSignUp(e) {
     const auth = firebase.auth();
 
     const promise = auth.createUserWithEmailAndPassword(email, password);
-    promise.catch(e=> console.log(e.message));
+    promise.catch(e => console.log(e.message));
 }
+
+
 
 function getInputVal(id) {
     return document.getElementById(id).value;
@@ -46,14 +57,14 @@ function getInputVal(id) {
 
 //funciones de validacion de contrasena
 var password = document.getElementById("password")
-  , confirm_password = document.getElementById("confirm_password");
+    , confirm_password = document.getElementById("confirm_password");
 
-function validatePassword(){
-  if(password.value != confirm_password.value) {
-    confirm_password.setCustomValidity("Passwords Don't Match");
-  } else {
-    confirm_password.setCustomValidity('');
-  }
+function validatePassword() {
+    if (password.value != confirm_password.value) {
+        confirm_password.setCustomValidity("Passwords Don't Match");
+    } else {
+        confirm_password.setCustomValidity('');
+    }
 }
 
 
