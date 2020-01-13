@@ -21,7 +21,6 @@
         <script defer src="static/vendor/js/popper.min.js"></script>
         <script defer src="static/vendor/js/bootstrap.min.js"></script>
       
-        <script defer src="app.js"></script>
         <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
         <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.5/aframe/build/aframe-ar.js"></script>
 
@@ -39,6 +38,9 @@
     <!-- initialize the SDK after all desired features are loaded -->
         <script defer src="/__/firebase/init.js"></script>
         
+    <!-- carousell toggler -->
+    <script defer src="./javascript/carousel-show.js"></script>
+    
         <title>ARHub | selector </title>
 </head>
 <body class="center-cont">
@@ -88,50 +90,45 @@
 
     </section>
     <!-- hasta aquí el contenido -->
-    <div id="carousel">
-        <div class="collapse" id="collapseMarkers" data-parent="#carousel">
-                <section class="container">
-                    <div class="row">
-                        <div class="col">
-        
-                            <div class="your-class p-3">
-                                <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                            </div>
-                        </div>
+        <div class="container-fluid p-1" >
+                <div class="your-class  "id="markers-carousel" >
+                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
                     </div>
-                </section>
-            </div>
-            <div class="collapse" id="collapseModels" data-parent="#carousel">
-                    <section class="container">
-                        <div class="row">
-                            <div class="col">
-            
-                                <div class="your-class p-3">
-                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            
+
+        </div>
+        <div class="container-fluid p-1" >
+
+                <div class=" your-class  d-none " id="models-carousel" >
+                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                </div>            
+        </div>
+
     </div>
-    <footer class="container-fluid font-weight-bolder  py-5  bg-dark h-50" style="z-index: 1;">
+    <footer class="container-fluid font-weight-bolder  py-4  bg-dark h-50" style="z-index: 1;">
         <div class="row pb-0 ">        
             <div class="col-4 m-0 p-0 ">
-                <button class="btn btn-info btn-block pb-4 h-100" type="button" data-toggle="collapse" data-target="#collapseMarkers" aria-expanded="false" aria-controls="collapseMarkers">
+                <button class="btn btn-info btn-outline-info  btn-block pb-4 h-100" 
+                        type="button" data-toggle="collapse" 
+                        data-target="#collapseMarkers" 
+                        aria-expanded="false" aria-controls="collapseMarkers"
+                        id="marker-button">
                     markers
                 </button>
             </div>
             <div class="col-4 m-0 p-0">
-                <button class="btn btn-secondary btn-block pb-4 h-100" type="button" data-toggle="collapse" data-target="#collapseModels" aria-expanded="false" aria-controls="collapseModels">
+                <button class="btn btn-secondary btn-block pb-4 h-100" 
+                        type="button" data-toggle="collapse" 
+                        data-target="#collapseModels" 
+                        aria-expanded="false" aria-controls="collapseModels"
+                        id="model-button">
                     models
                 </button>
             </div>
