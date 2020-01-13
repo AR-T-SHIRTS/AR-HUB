@@ -1,0 +1,14 @@
+[debug] [2020-01-13T16:05:44.520Z] ----------------------------------------------------------------------
+[debug] [2020-01-13T16:05:44.522Z] Command:       /usr/bin/node /usr/bin/firebase serve
+[debug] [2020-01-13T16:05:44.522Z] CLI Version:   7.11.0
+[debug] [2020-01-13T16:05:44.522Z] Platform:      linux
+[debug] [2020-01-13T16:05:44.522Z] Node Version:  v12.13.1
+[debug] [2020-01-13T16:05:44.522Z] Time:          Mon Jan 13 2020 16:05:44 GMT+0000 (GMT)
+[debug] [2020-01-13T16:05:44.523Z] ----------------------------------------------------------------------
+[debug] [2020-01-13T16:05:44.523Z] 
+[debug] [2020-01-13T16:05:44.532Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-13T16:05:44.533Z] > authorizing via signed-in user
+[debug] [2020-01-13T16:05:44.533Z] [iam] checking project ar-hub-6c9e7 for permissions ["firebase.projects.get"]
+[debug] [2020-01-13T16:05:44.534Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-01-13T16:05:44.534Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
