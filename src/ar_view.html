@@ -42,11 +42,28 @@
     <!-- carousell toggler -->
     <script defer src="./javascript/carousel-show.js"></script>
 
+    <!-- Ar-js scripts -->
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script>
+
     <title>ARHub | view </title>
 </head>
 
 <body>
+    <a-scene embedded arjs>
+        <a-marker preset="hiro">
+            <a-box position='0 0.5 0' material='color: yellow;'></a-box>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
 
+    <div class="container fixed-bottom">
+        <div class="row">
+            <div class="col m-0 p-0">
+                <a href="models_and_markers.html" class="btn btn-info text-white btn-block pb-4 h-100">Close</a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
