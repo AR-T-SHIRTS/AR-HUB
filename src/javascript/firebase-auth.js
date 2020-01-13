@@ -1,4 +1,3 @@
-
 // Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyB_cZ0r4c5wKQxPriRfra0__nA1_TEFW-M",
@@ -13,40 +12,27 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 //event listener
-document.getElementById('signup').addEventListener('click', submitSignUp)
-document.getElementById('signin').addEventListener('click', submitSignIn)
-
-
-const signInResult = false
+document.getElementById('signup').addEventListener('submit', submitSignUp)
+document.getElementById('signin').addEventListener('submit', submitSignIn)
 
 function submitSignIn(e) {
     e.preventDefault();
 
     var email = getInputVal('emails');
     var password = getInputVal('passwords');
-    
-
     const auth = firebase.auth();
+
 
     const promise = auth.signInWithEmailAndPassword(email, password);
     promise.catch(function (e){
-        result = e.message
-
+        console.log(e.message);
         return 0;
     });
 
-    const user = firebase.auth().currentUser;
-    user.
-    if(user.emailVerified){
-
-        document.getElementById("start").classList.remove('d-none')
-        document.getElementById("start").classList.add('d-block')
-    
-    } 
-    //else {
-    //    document.location.reload(true)
-    //    
-    //}
+    var user = firebase.auth().currentUser;
+    if(user != null){
+        window.location = 'models_and_markers.html';
+    }
 }
 
 
@@ -61,9 +47,6 @@ function submitSignUp(e) {
 
     const promise = auth.createUserWithEmailAndPassword(email, password);
     promise.catch(e => console.log(e.message));
-
-    const user = firebase.auth().currentUser;
-    console.log(user)
 }
 
 
@@ -73,7 +56,7 @@ function getInputVal(id) {
 }
 
 //funciones de validacion de contrasena
-const password = document.getElementById("password")
+var password = document.getElementById("password")
     , confirm_password = document.getElementById("confirm_password");
 
 function validatePassword() {
