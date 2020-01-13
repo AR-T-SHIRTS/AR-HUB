@@ -89,7 +89,7 @@
   <div id="signUpModal" class="modal fade" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg  modal-dialog-centered">
       <div class="modal-content">
-        <form id="signup">
+        <form >
           <div class="modal-header">
             <h5 class="modal-title" id="signUpTitle">Join us! Just enter your data below</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -112,7 +112,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-dark" data-dismiss="modal">Cancel</button>
-            <button type="submit" class="btn btn-success">Join</button>
+            <button type="submit" class="btn btn-success" id="signup">Join</button>
           </div>
         </form>
       </div>
@@ -122,7 +122,7 @@
   <div id="signInModal" class="modal fade" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
-        <form id="signin">
+        <form>
           <div class="modal-header">
             <h5 class="modal-title" id="signUpTitle">Welcome! please enter your data</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -141,8 +141,9 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-success" id="signin">Enter</button>          
             <a href="models_and_markers.html">
-              <button type="submit" class="btn btn-success">Let's start</button>
+              <button id="start" class="btn btn-info d-none">Let's start</button>
             </a>
           </div>
         </form>
