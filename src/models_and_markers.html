@@ -5,164 +5,179 @@
 
 <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet"> 
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="static/vendor/css/bootstrap.min.css">
-        <link rel="stylesheet" href="static/vendor/css/style.scss">
-        
-        <link rel="stylesheet" href="static/vendor/css/body.css">
-        <link rel="stylesheet" href="static/vendor/css/slideout.css">
-         
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="static/vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/vendor/css/style.scss">
+
+    <link rel="stylesheet" href="static/vendor/css/body.css">
+    <link rel="stylesheet" href="static/vendor/css/slideout.css">
 
 
-        <script defer src="static/vendor/js/jquery-3.4.1.min.js"></script>
-        <script defer src="static/vendor/js/popper.min.js"></script>
-        <script defer src="static/vendor/js/bootstrap.min.js"></script>
-      
-        <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
-        <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.5/aframe/build/aframe-ar.js"></script>
 
-        <!-- slick -->
-        <link rel="stylesheet" type="text/css" href="./static/vendor/slick-1.8.1/slick/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="./static/vendor/slick-1.8.1/slick/slick-theme.css"/>
-    
-        <!-- update the version number as needed -->
-        <script defer src="/__/firebase/7.6.2/firebase-app.js"></script>
+    <script defer src="static/vendor/js/jquery-3.4.1.min.js"></script>
+    <script defer src="static/vendor/js/popper.min.js"></script>
+    <script defer src="static/vendor/js/bootstrap.min.js"></script>
+
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.5/aframe/build/aframe-ar.js"></script>
+
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="./static/vendor/slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./static/vendor/slick-1.8.1/slick/slick-theme.css" />
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.6.2/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
-        <script defer src="/__/firebase/7.6.2/firebase-auth.js"></script>
-        <script defer src="/__/firebase/7.6.2/firebase-database.js"></script>
-        <script defer src="/__/firebase/7.6.2/firebase-messaging.js"></script>
-        <script defer src="/__/firebase/7.6.2/firebase-storage.js"></script>
+    <script defer src="/__/firebase/7.6.2/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.6.2/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.6.2/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.6.2/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
-        <script defer src="/__/firebase/init.js"></script>
-        
+    <script defer src="/__/firebase/init.js"></script>
+
     <!-- carousell toggler -->
     <script defer src="./javascript/carousel-show.js"></script>
-       <!-- Font Awesome JS -->
-       <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-       <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-   
-    
-        <title>ARHub | selector </title>
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+
+
+    <title>ARHub | selector </title>
 </head>
+
 <body class="center-cont">
-    
+
     <div class="wrapper container-fluid p-0">
         <nav id="sidebar" class="bg-dark container-fluid p-0">
-                    <div class="sidebar-header text-center bg-dark">
-                            <img src="https://i.picsum.photos/id/401/300/300.jpg" alt="model preview" style="max-width: 50%; height: auto;" class="img-fluid circle">
-                    </div>
-                
-                    <ul class="list-unstyled components">
-                        <li>
-                                <a type="button" class="btn btn-link" data-toggle="modal" data-target="#uploadModel">
-                                    Upload model
-                                </a>
-                        </li>
-                        <li>
-                            
-                                <a type="button" class="btn btn-link" data-toggle="modal" data-target="#uploadMarker">
-                                    Upload marker
-                                </a>
-                        </li>
-                    </ul>
-                    
-                <div class="modal fade text-dark" id="uploadModel" tabindex="-1" role="dialog" aria-labelledby="uploadModel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalCenterTitle">Upload model</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div class="sidebar-header text-center bg-dark">
+                <img src="https://i.picsum.photos/id/401/300/300.jpg" alt="model preview"
+                    style="max-width: 50%; height: auto;" class="img-fluid circle">
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a type="button" class="btn btn-link" data-toggle="modal" data-target="#uploadModel">
+                        Upload model
+                    </a>
+                </li>
+                <li>
+
+                    <a type="button" class="btn btn-link" data-toggle="modal" data-target="#uploadMarker">
+                        Upload marker
+                    </a>
+                </li>
+            </ul>
+
+            <div class="modal fade text-dark" id="uploadModel" tabindex="-1" role="dialog" aria-labelledby="uploadModel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Upload model</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                                    <form>
-                                            <div class="form-group">
-                                                    <label for="exampleInputEmail1">Model name</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                  </div>
-                                            <div class="form-group">
-                                              <label for="exampleFormControlFile1">browse your model</label>
-                                              <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                                            </div>
-                                    </form>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                          </div>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Model name</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlFile1">browse your model</label>
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
                     </div>
-                    
-                <div class="modal fade text-dark" id="uploadMarker" tabindex="-1" role="dialog" aria-labelledby="uploadMarker" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalCenterTitle">Upload marker</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </div>
+            </div>
+
+            <div class="modal fade text-dark" id="uploadMarker" tabindex="-1" role="dialog"
+                aria-labelledby="uploadMarker" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Upload marker</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                                    <form>
-                                            <div class="form-group">
-                                                    <label for="exampleInputEmail1">Marker name</label>
-                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                  </div>
-                                            <div class="form-group">
-                                              <label for="exampleFormControlFile1">browse your marker</label>
-                                              <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                                            </div>
-                                    </form>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                          </div>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Marker name</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlFile1">browse your marker</label>
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
                     </div>
+                </div>
+            </div>
         </nav>
         <div id="content" class="container-fluid p-0">
-            <header class="container-fluid" >
+            <header class="container-fluid">
                 <div class="row">
                     <div class="col-6 text-left pt-4">
                         <!-- menu -->
-                               <button type="button" id="sidebarCollapse" class="btn btn-info align-self-center">
-                                    <i class="fas fa-align-left"></i>
-                                    <span>Toggle Sidebar</span>
-                                </button>
-                            
+                        <button type="button" id="sidebarCollapse" class="btn btn-info align-self-center">
+                            <i class="fas fa-align-left"></i>
+                            <span>Toggle Sidebar</span>
+                        </button>
+
                     </div>
                     <div class="col-6 text-right p-3 d-sm-none align-content-start">
-                        <a href="./index.html"> 
-                        <img src="./static/image/logo_05x.png" alt="model preview" style="max-width: 30%; height: auto;" class="img-fluid ">
+                        <a href="./index.html">
+                            <img src="./static/image/logo_05x.png" alt="model preview"
+                                style="max-width: 30%; height: auto;" class="img-fluid ">
                         </a>
                     </div>
 
                     <div class="col-6 text-right p-3 d-none d-sm-block">
-                        <a href="./index.html"> 
-                        <img src="./static/image/logo_05x.png" alt="model preview" style="max-width: 20%; height: auto;" class="img-fluid ">
+                        <a href="./index.html">
+                            <img src="./static/image/logo_05x.png" alt="model preview"
+                                style="max-width: 20%; height: auto;" class="img-fluid ">
                         </a>
                     </div>
                 </div>
             </header>
 
-            <!-- aquí va el contenido -->    
-            <section class="container-fluid " >  
+            <!-- aquí va el contenido -->
+            <section class="container-fluid ">
                 <!-- preview -->
                 <div class="row justify-content-center p-3 py-5 ">
                     <div class="col-6 p-3 text-right ">
-                        <img src="./static/image/hiro.jpeg" alt="marker preview" style="max-width: 50%; height: auto;" class="img-fluid img-thumbnail ">
+                        <img src="./static/image/hiro.jpeg" alt="marker preview" style="max-width: 50%; height: auto;"
+                            class="img-fluid img-thumbnail ">
                     </div>
                     <div class="col-6 p-3 text-left ">
-                        <img src="./static/image/cube.png" alt="model preview" style="max-width: 50%; height: auto;" class="img-fluid img-thumbnail">
+                        <img src="./static/image/cube.png" alt="model preview" style="max-width: 50%; height: auto;"
+                            class="img-fluid img-thumbnail">
                     </div>
                 </div>
 
@@ -171,9 +186,11 @@
                     <div class="col-sm-12 col-md-6 ">
                         <form style="z-index: 1000;">
                             <div class="form-group">
-                              <input type="text" class="form-control border m-2" id="formGroupExampleInput" placeholder="Object name ...">
-                              <textarea class="form-control m-2" id="exampleFormControlTextarea1" placeholder="Write a description" rows="3" ></textarea>  
-                              <button type="submit" class="btn btn-success btn-block m-2">Save</button>
+                                <input type="text" class="form-control border m-2" id="formGroupExampleInput"
+                                    placeholder="Object name ...">
+                                <textarea class="form-control m-2" id="exampleFormControlTextarea1"
+                                    placeholder="Write a description" rows="3"></textarea>
+                                <button type="submit" class="btn btn-success btn-block m-2">Save</button>
                             </div>
                         </form>
                     </div>
@@ -181,53 +198,61 @@
 
             </section>
             <!-- hasta aquí el contenido -->
-    
 
 
-            <footer class="container-fluid font-weight-bolder  py-4  bg-dark " style="z-index: 1;" >
-                    <div class="container-fluid p-0" >
-                            <div class="your-class  "id="markers-carousel" >
-                                    <img src="./static/image/hiro.jpeg" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                    <img src="./static/image/pattern-sick-basic-black-logo_30x50mm_Mesa de trabajo 1.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                    <img src="./static/image/pattern-myment-icon_Mesa de trabajo 1.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                    <img src="./static/image/pattern-tv.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                    <img src="./static/image/pattern-marker.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                </div>
-                            
+
+            <footer class="container-fluid font-weight-bolder  py-4  bg-dark " style="z-index: 1;">
+                <div class="container-fluid p-0">
+                    <div class="your-class  " id="markers-carousel">
+                        <img src="./static/image/hiro.jpeg" alt="marker preview" style="max-width: 30%; height: auto;"
+                            class="img-fluid img-thumbnail m-1">
+                        <img src="./static/image/pattern-sick-basic-black-logo_30x50mm_Mesa de trabajo 1.png"
+                            alt="marker preview" style="max-width: 30%; height: auto;"
+                            class="img-fluid img-thumbnail m-1">
+                        <img src="./static/image/pattern-myment-icon_Mesa de trabajo 1.png" alt="marker preview"
+                            style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                        <img src="./static/image/pattern-tv.png" alt="marker preview"
+                            style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                        <img src="./static/image/pattern-marker.png" alt="marker preview"
+                            style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
                     </div>
-                    <div class="container-fluid p-0" >
-                    
-                            <div class=" your-class  d-none " id="models-carousel" >
-                                    <img src="./static/image/cube.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                    <img src="./static/image/dice.jpg" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                    <img src="./static/image/figure.jpg" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                    <img src="./static/image/flower.jpg" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                    <img src="./static/image/skulñl.jpg" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                            </div>            
+
+                </div>
+                <div class="container-fluid p-0">
+
+                    <div class=" your-class  d-none " id="models-carousel">
+                        <img src="./static/image/cube.png" alt="marker preview" style="max-width: 30%; height: auto;"
+                            class="img-fluid img-thumbnail m-1">
+                        <img src="./static/image/dice.jpg" alt="marker preview" style="max-width: 30%; height: auto;"
+                            class="img-fluid img-thumbnail m-1">
+                        <img src="./static/image/figure.jpg" alt="marker preview" style="max-width: 30%; height: auto;"
+                            class="img-fluid img-thumbnail m-1">
+                        <img src="./static/image/flower.jpg" alt="marker preview" style="max-width: 30%; height: auto;"
+                            class="img-fluid img-thumbnail m-1">
+                        <img src="./static/image/skulñl.jpg" alt="marker preview" style="max-width: 30%; height: auto;"
+                            class="img-fluid img-thumbnail m-1">
                     </div>
-                <div class="row py-2 ">        
+                </div>
+                <div class="row py-2 ">
                     <div class="col-4 m-0 p-0 ">
-                        <button class="btn btn-info btn-outline-info  btn-block pb-4 h-100" 
-                                type="button" data-toggle="collapse" 
-                                data-target="#collapseMarkers" 
-                                aria-expanded="false" aria-controls="collapseMarkers"
-                                id="marker-button">
+                        <button class="btn btn-info btn-outline-info  btn-block pb-4 h-100" type="button"
+                            data-toggle="collapse" data-target="#collapseMarkers" aria-expanded="false"
+                            aria-controls="collapseMarkers" id="marker-button">
                             markers
                         </button>
                     </div>
                     <div class="col-4 m-0 p-0">
-                        <button class="btn btn-secondary btn-block pb-4 h-100" 
-                                type="button" data-toggle="collapse" 
-                                data-target="#collapseModels" 
-                                aria-expanded="false" aria-controls="collapseModels"
-                                id="model-button">
+                        <button class="btn btn-secondary btn-block pb-4 h-100" type="button" data-toggle="collapse"
+                            data-target="#collapseModels" aria-expanded="false" aria-controls="collapseModels"
+                            id="model-button">
                             models
                         </button>
                     </div>
                     <div class="col-4 m-0 p-0">
                         <a href="./ar_view.html">
-                            <button class="btn btn-info text-white btn-block pb-4 h-100" type="button"> view display</button>
-                        </a> 
+                            <button class="btn btn-info text-white btn-block pb-4 h-100" type="button"> view
+                                display</button>
+                        </a>
                     </div>
                 </div>
             </footer>
@@ -238,19 +263,19 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="./static/vendor/slick-1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript">
-    $('.your-class').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
-    });
+        $('.your-class').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3
+        });
 
-    $(document).ready(function () {
+        $(document).ready(function () {
 
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
-    });
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
 
-    });
+        });
     </script>
 
 </body>
