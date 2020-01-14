@@ -10,8 +10,8 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"firebase": "^7.6.2",
 		"jquery": "^3.4.1",
-		"popper.js": "^1.16.0",
-		"firebase": "^7.6.2"
+		"popper.js": "^1.16.0"
 	}
 }

@@ -5,9 +5,6 @@
 
 <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="static/vendor/css/bootstrap.min.css">
-<link rel="stylesheet" href="static/vendor/css/style.scss">
-<link rel="stylesheet" href="static/vendor/css/carousel.css">
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +13,12 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="static/vendor/css/bootstrap.min.css">
         <link rel="stylesheet" href="static/vendor/css/style.scss">
+        
         <link rel="stylesheet" href="static/vendor/css/body.css">
+        <link rel="stylesheet" href="static/vendor/css/slideout.css">
+         
+
+
         <script defer src="static/vendor/js/jquery-3.4.1.min.js"></script>
         <script defer src="static/vendor/js/popper.min.js"></script>
         <script defer src="static/vendor/js/bootstrap.min.js"></script>
@@ -40,104 +42,131 @@
         
     <!-- carousell toggler -->
     <script defer src="./javascript/carousel-show.js"></script>
+       <!-- Font Awesome JS -->
+       <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+       <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+   
     
         <title>ARHub | selector </title>
 </head>
 <body class="center-cont">
-    <header class="container-fluid">
-        <div class="row">
-            <div class="col-6">
-                <!-- menu -->
-            </div>
-            <div class="col-6 text-right p-3 d-sm-none">
-                <a href="./index.html"> 
-                <img src="./static/image/logo_05x.png" alt="model preview" style="max-width: 50%; height: auto;" class="img-fluid ">
-                </a>
-            </div>
-
-            <div class="col-6 text-right p-3 d-none d-sm-block">
-                <a href="./index.html"> 
-                <img src="./static/image/logo_05x.png" alt="model preview" style="max-width: 20%; height: auto;" class="img-fluid ">
-                </a>
-            </div>
-        </div>
-    </header>
-    <!-- aquí va el contenido -->    
-    <section class="container-fluid ">
-        
-        <!-- preview -->
-        <div class="row justify-content-center p-3 py-5 ">
-            <div class="col-6 p-3 text-right ">
-                <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 70%; height: auto;" class="img-fluid img-thumbnail ">
-            </div>
-            <div class="col-6 p-3 text-left ">
-                <img src="./static/image/noimage.png" alt="model preview" style="max-width: 70%; height: auto;" class="img-fluid img-thumbnail">
-            </div>
-        </div>
-
-        <!-- aquí va la info -->
-        <div class="row my-3 justify-content-center px-5">
-            <div class="col-sm-12 col-md-6 ">
-                <form style="z-index: 1000;">
-                    <div class="form-group">
-                      <input type="text" class="form-control border m-2" id="formGroupExampleInput" placeholder="Object name ...">
-                      <textarea class="form-control m-2" id="exampleFormControlTextarea1" placeholder="Write a description" rows="3" ></textarea>  
-                      <button type="submit" class="btn btn-success btn-block m-2">Save</button>
+    
+    <div class="wrapper">
+        <nav id="sidebar" class="bg-dark">
+                    <div class="sidebar-header text-center bg-dark">
+                            <img src="https://i.picsum.photos/id/401/300/300.jpg" alt="model preview" style="max-width: 50%; height: auto;" class="img-fluid circle">
                     </div>
-                </form>
-            </div>
-        </div>
-
-    </section>
-    <!-- hasta aquí el contenido -->
-        <div class="container-fluid p-1" >
-                <div class="your-class  "id="markers-carousel" >
-                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                
+                    <ul class="list-unstyled components">
+                        <li>
+                            <a href="#">Upload model</a>
+                        </li>
+                        <li>
+                            <a href="#">Upload marker</a>
+                        </li>
+                    </ul>
+        </nav>
+        <div id="content" >
+            <header class="container-fluid" >
+                <div class="row">
+                    <div class="col-6 text-left pt-4">
+                        <!-- menu -->
+                               <button type="button" id="sidebarCollapse" class="btn btn-info align-self-center">
+                                    <i class="fas fa-align-left"></i>
+                                    <span>Toggle Sidebar</span>
+                                </button>
+                            
+                    </div>
+                    <div class="col-6 text-right p-3 d-sm-none align-content-start">
+                        <a href="./index.html"> 
+                        <img src="./static/image/logo_05x.png" alt="model preview" style="max-width: 50%; height: auto;" class="img-fluid ">
+                        </a>
                     </div>
 
-        </div>
-        <div class="container-fluid p-1" >
+                    <div class="col-6 text-right p-3 d-none d-sm-block">
+                        <a href="./index.html"> 
+                        <img src="./static/image/logo_05x.png" alt="model preview" style="max-width: 20%; height: auto;" class="img-fluid ">
+                        </a>
+                    </div>
+                </div>
+            </header>
 
-                <div class=" your-class  d-none " id="models-carousel" >
-                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                </div>            
-        </div>
+            <!-- aquí va el contenido -->    
+            <section class="container-fluid " >  
+                <!-- preview -->
+                <div class="row justify-content-center p-3 py-5 ">
+                    <div class="col-6 p-3 text-right ">
+                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 70%; height: auto;" class="img-fluid img-thumbnail ">
+                    </div>
+                    <div class="col-6 p-3 text-left ">
+                        <img src="./static/image/noimage.png" alt="model preview" style="max-width: 70%; height: auto;" class="img-fluid img-thumbnail">
+                    </div>
+                </div>
 
+                <!-- aquí va la info -->
+                <div class="row my-3 justify-content-center px-5">
+                    <div class="col-sm-12 col-md-6 ">
+                        <form style="z-index: 1000;">
+                            <div class="form-group">
+                              <input type="text" class="form-control border m-2" id="formGroupExampleInput" placeholder="Object name ...">
+                              <textarea class="form-control m-2" id="exampleFormControlTextarea1" placeholder="Write a description" rows="3" ></textarea>  
+                              <button type="submit" class="btn btn-success btn-block m-2">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </section>
+            <!-- hasta aquí el contenido -->
+
+
+            <footer class="container-fluid font-weight-bolder  py-4  bg-dark " style="z-index: 1;" >
+                    <div class="container-fluid p-0" >
+                            <div class="your-class  "id="markers-carousel" >
+                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                                </div>
+                            
+                    </div>
+                    <div class="container-fluid p-0" >
+                    
+                            <div class=" your-class  d-none " id="models-carousel" >
+                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                            </div>            
+                    </div>
+                <div class="row py-2 ">        
+                    <div class="col-4 m-0 p-0 ">
+                        <button class="btn btn-info btn-outline-info  btn-block pb-4 h-100" 
+                                type="button" data-toggle="collapse" 
+                                data-target="#collapseMarkers" 
+                                aria-expanded="false" aria-controls="collapseMarkers"
+                                id="marker-button">
+                            markers
+                        </button>
+                    </div>
+                    <div class="col-4 m-0 p-0">
+                        <button class="btn btn-secondary btn-block pb-4 h-100" 
+                                type="button" data-toggle="collapse" 
+                                data-target="#collapseModels" 
+                                aria-expanded="false" aria-controls="collapseModels"
+                                id="model-button">
+                            models
+                        </button>
+                    </div>
+                    <div class="col-4 m-0 p-0">
+                        <button class="btn btn-info text-white btn-block pb-4 h-100" type="button"> view display</button>
+                    </div>
+                </div>
+            </footer>
+        </div>
     </div>
-    <footer class="container-fluid font-weight-bolder  py-4  bg-dark h-50" style="z-index: 1;">
-        <div class="row pb-0 ">        
-            <div class="col-4 m-0 p-0 ">
-                <button class="btn btn-info btn-outline-info  btn-block pb-4 h-100" 
-                        type="button" data-toggle="collapse" 
-                        data-target="#collapseMarkers" 
-                        aria-expanded="false" aria-controls="collapseMarkers"
-                        id="marker-button">
-                    markers
-                </button>
-            </div>
-            <div class="col-4 m-0 p-0">
-                <button class="btn btn-secondary btn-block pb-4 h-100" 
-                        type="button" data-toggle="collapse" 
-                        data-target="#collapseModels" 
-                        aria-expanded="false" aria-controls="collapseModels"
-                        id="model-button">
-                    models
-                </button>
-            </div>
-            <div class="col-4 m-0 p-0">
-                <button class="btn btn-info text-white btn-block pb-4 h-100" type="button"> view display</button>
-            </div>
-        </div>
-    </footer>
-
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -149,6 +178,13 @@
         slidesToScroll: 3
     });
 
+    $(document).ready(function () {
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+    });
     </script>
 
 </body>
