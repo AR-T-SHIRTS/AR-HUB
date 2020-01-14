@@ -51,22 +51,85 @@
 </head>
 <body class="center-cont">
     
-    <div class="wrapper">
-        <nav id="sidebar" class="bg-dark">
+    <div class="wrapper container-fluid p-0">
+        <nav id="sidebar" class="bg-dark container-fluid p-0">
                     <div class="sidebar-header text-center bg-dark">
                             <img src="https://i.picsum.photos/id/401/300/300.jpg" alt="model preview" style="max-width: 50%; height: auto;" class="img-fluid circle">
                     </div>
                 
                     <ul class="list-unstyled components">
                         <li>
-                            <a href="#">Upload model</a>
+                                <a type="button" class="btn btn-link" data-toggle="modal" data-target="#uploadModel">
+                                    Upload model
+                                </a>
                         </li>
                         <li>
-                            <a href="#">Upload marker</a>
+                            
+                                <a type="button" class="btn btn-link" data-toggle="modal" data-target="#uploadMarker">
+                                    Upload marker
+                                </a>
                         </li>
                     </ul>
+                    
+                <div class="modal fade text-dark" id="uploadModel" tabindex="-1" role="dialog" aria-labelledby="uploadModel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalCenterTitle">Upload model</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                    <form>
+                                            <div class="form-group">
+                                                    <label for="exampleInputEmail1">Model name</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                  </div>
+                                            <div class="form-group">
+                                              <label for="exampleFormControlFile1">browse your model</label>
+                                              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                            </div>
+                                    </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    
+                <div class="modal fade text-dark" id="uploadMarker" tabindex="-1" role="dialog" aria-labelledby="uploadMarker" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalCenterTitle">Upload marker</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                    <form>
+                                            <div class="form-group">
+                                                    <label for="exampleInputEmail1">Marker name</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                  </div>
+                                            <div class="form-group">
+                                              <label for="exampleFormControlFile1">browse your marker</label>
+                                              <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                            </div>
+                                    </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
         </nav>
-        <div id="content" >
+        <div id="content" class="container-fluid p-0">
             <header class="container-fluid" >
                 <div class="row">
                     <div class="col-6 text-left pt-4">
@@ -79,7 +142,7 @@
                     </div>
                     <div class="col-6 text-right p-3 d-sm-none align-content-start">
                         <a href="./index.html"> 
-                        <img src="./static/image/logo_05x.png" alt="model preview" style="max-width: 50%; height: auto;" class="img-fluid ">
+                        <img src="./static/image/logo_05x.png" alt="model preview" style="max-width: 30%; height: auto;" class="img-fluid ">
                         </a>
                     </div>
 
@@ -96,10 +159,10 @@
                 <!-- preview -->
                 <div class="row justify-content-center p-3 py-5 ">
                     <div class="col-6 p-3 text-right ">
-                        <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 70%; height: auto;" class="img-fluid img-thumbnail ">
+                        <img src="./static/image/hiro.jpeg" alt="marker preview" style="max-width: 50%; height: auto;" class="img-fluid img-thumbnail ">
                     </div>
                     <div class="col-6 p-3 text-left ">
-                        <img src="./static/image/noimage.png" alt="model preview" style="max-width: 70%; height: auto;" class="img-fluid img-thumbnail">
+                        <img src="./static/image/cube.png" alt="model preview" style="max-width: 50%; height: auto;" class="img-fluid img-thumbnail">
                     </div>
                 </div>
 
@@ -124,22 +187,22 @@
             <footer class="container-fluid font-weight-bolder  py-4  bg-dark " style="z-index: 1;" >
                     <div class="container-fluid p-0" >
                             <div class="your-class  "id="markers-carousel" >
-                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                                    <img src="./static/image/hiro.jpeg" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                                    <img src="./static/image/pattern-sick-basic-black-logo_30x50mm_Mesa de trabajo 1.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                                    <img src="./static/image/pattern-myment-icon_Mesa de trabajo 1.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                                    <img src="./static/image/pattern-tv.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                                    <img src="./static/image/pattern-marker.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
                                 </div>
                             
                     </div>
                     <div class="container-fluid p-0" >
                     
                             <div class=" your-class  d-none " id="models-carousel" >
-                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
-                                    <img src="./static/image/noimage.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                                    <img src="./static/image/cube.png" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                                    <img src="./static/image/dice.jpg" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                                    <img src="./static/image/figure.jpg" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                                    <img src="./static/image/flower.jpg" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
+                                    <img src="./static/image/skulñl.jpg" alt="marker preview" style="max-width: 30%; height: auto;" class="img-fluid img-thumbnail m-1">
                             </div>            
                     </div>
                 <div class="row py-2 ">        
