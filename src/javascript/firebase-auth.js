@@ -23,21 +23,20 @@ function submitSignIn(e) {
     var password = getInputVal('passwords');
     const auth = firebase.auth();
 
+    auth.signOut().catch(function (e) {
+        console.log(e.message);
+    });
 
     const promise = auth.signInWithEmailAndPassword(email, password);
-    promise.catch(function (e){
+    promise.catch(function (e) {
         console.log(e.message);
-        return 0;
     });
 
     var user = firebase.auth().currentUser;
-    if(user != null){
+    if (user != null) {
         window.location = 'models_and_markers.html';
     }
 }
-
-
-
 
 function submitSignUp(e) {
     e.preventDefault();
@@ -49,8 +48,6 @@ function submitSignUp(e) {
     const promise = auth.createUserWithEmailAndPassword(email, password);
     promise.catch(e => console.log(e.message));
 }
-
-
 
 function getInputVal(id) {
     return document.getElementById(id).value;
