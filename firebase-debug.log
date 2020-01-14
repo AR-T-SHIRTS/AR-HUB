@@ -1,0 +1,39 @@
+[debug] [2020-01-14T14:24:46.965Z] ----------------------------------------------------------------------
+[debug] [2020-01-14T14:24:46.970Z] Command:       /usr/bin/node /usr/bin/firebase serve
+[debug] [2020-01-14T14:24:46.970Z] CLI Version:   7.11.0
+[debug] [2020-01-14T14:24:46.970Z] Platform:      linux
+[debug] [2020-01-14T14:24:46.970Z] Node Version:  v12.13.1
+[debug] [2020-01-14T14:24:46.971Z] Time:          Tue Jan 14 2020 14:24:46 GMT+0000 (GMT)
+[debug] [2020-01-14T14:24:46.972Z] ----------------------------------------------------------------------
+[debug] [2020-01-14T14:24:46.972Z] 
+[debug] [2020-01-14T14:24:46.979Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-14T14:24:46.979Z] > authorizing via signed-in user
+[debug] [2020-01-14T14:24:46.979Z] [iam] checking project ar-hub-6c9e7 for permissions ["firebase.projects.get"]
+[debug] [2020-01-14T14:24:46.983Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/ar-hub-6c9e7:testIamPermissions  
+
+[debug] [2020-01-14T14:24:48.129Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-14T14:24:48.141Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/ar-hub-6c9e7  
+ 
+[debug] [2020-01-14T14:24:48.626Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/mrneka/Documentos/SIPC/AR-HUB'...
+[info] 
+[debug] [2020-01-14T14:24:48.639Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/ar-hub-6c9e7/webApps/-/config  
+ 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "12"
+[info] ✔  functions: Emulator started at http://localhost:5001
+[debug] [2020-01-14T14:24:49.443Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "/home/mrneka/Documentos/SIPC/AR-HUB/functions" for Cloud Functions...
+[debug] [2020-01-14T14:24:49.542Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-01-14T14:24:49.542Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-01-14T14:24:49.542Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-01-14T14:24:49.543Z] [worker-~diagnostic~-117e66eb-6056-4c64-a735-3e281363ef5a]: Assigning socketPath: /tmp/fire_emu_17576.sock
+[debug] [2020-01-14T14:24:49.543Z] [worker-~diagnostic~-117e66eb-6056-4c64-a735-3e281363ef5a]: BUSY
+[info] i  hosting: Serving hosting files from: src
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2020-01-14T14:24:49.805Z] [runtime-status] [17576] Functions runtime initialized. {"cwd":"/home/mrneka/Documentos/SIPC/AR-HUB/functions","node_version":"12.13.1"}
+[debug] [2020-01-14T14:24:49.806Z] [runtime-status] [17576] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-01-14T14:24:49.809Z] [runtime-status] [17576] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.0","resolution":"/home/mrneka/Documentos/SIPC/AR-HUB/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-01-14T14:24:49.810Z] [runtime-status] [17576] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/mrneka/Documentos/SIPC/AR-HUB/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-01-14T14:24:49.812Z] [runtime-status] [17576] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/home/mrneka/Documentos/SIPC/AR-HUB/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-01-14T14:24:49.848Z] [worker-~diagnostic~-117e66eb-6056-4c64-a735-3e281363ef5a]: IDLE
