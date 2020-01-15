@@ -29,6 +29,8 @@ function submitSignIn(e) {
     promise
         .then(e => window.location = 'models_and_markers.html')
         .catch(e => alert(e.message));
+        
+    firebase.analytics().logEvent('intento de inicio de sesion');
 }
 
 function submitSignUp(e) {
