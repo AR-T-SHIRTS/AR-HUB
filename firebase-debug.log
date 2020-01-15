@@ -37,3 +37,42 @@
 [info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
 [debug] [2020-01-15T19:21:56.784Z] [worker-~diagnostic~-a66f20ba-c9c5-4a81-b7a9-3614fc936953]: exited
 [debug] [2020-01-15T19:21:56.784Z] [worker-~diagnostic~-a66f20ba-c9c5-4a81-b7a9-3614fc936953]: FINISHED
+[debug] [2020-01-15T19:24:40.220Z] ----------------------------------------------------------------------
+[debug] [2020-01-15T19:24:40.223Z] Command:       /usr/local/bin/firebase /home/pablo/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase serve
+[debug] [2020-01-15T19:24:40.223Z] CLI Version:   7.11.0
+[debug] [2020-01-15T19:24:40.223Z] Platform:      linux
+[debug] [2020-01-15T19:24:40.223Z] Node Version:  v10.17.0
+[debug] [2020-01-15T19:24:40.223Z] Time:          Wed Jan 15 2020 19:24:40 GMT+0000 (Western European Standard Time)
+[debug] [2020-01-15T19:24:40.223Z] ----------------------------------------------------------------------
+[debug] [2020-01-15T19:24:40.223Z] 
+[debug] [2020-01-15T19:24:40.231Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-15T19:24:40.231Z] > authorizing via signed-in user
+[debug] [2020-01-15T19:24:40.231Z] [iam] checking project ar-hub-6c9e7 for permissions ["firebase.projects.get"]
+[debug] [2020-01-15T19:24:40.233Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/ar-hub-6c9e7:testIamPermissions  
+
+[debug] [2020-01-15T19:24:41.177Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-15T19:24:41.181Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/ar-hub-6c9e7  
+ 
+[debug] [2020-01-15T19:24:41.528Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/pablo/Programacion/Web/AR-HUB'...
+[info] 
+[debug] [2020-01-15T19:24:41.536Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/ar-hub-6c9e7/webApps/-/config  
+ 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "10"
+[info] ✔  functions: Emulator started at http://localhost:5001
+[debug] [2020-01-15T19:24:42.879Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "/home/pablo/Programacion/Web/AR-HUB/functions" for Cloud Functions...
+[debug] [2020-01-15T19:24:42.959Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-01-15T19:24:42.959Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-01-15T19:24:42.959Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-01-15T19:24:42.960Z] [worker-~diagnostic~-13cbcb95-5099-4927-9cd5-ec2e8a642278]: Assigning socketPath: /tmp/fire_emu_5882.sock
+[debug] [2020-01-15T19:24:42.962Z] [worker-~diagnostic~-13cbcb95-5099-4927-9cd5-ec2e8a642278]: BUSY
+[info] i  hosting: Serving hosting files from: src
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2020-01-15T19:24:43.468Z] [runtime-status] [5882] Functions runtime initialized. {"cwd":"/home/pablo/Programacion/Web/AR-HUB/functions","node_version":"10.17.0"}
+[debug] [2020-01-15T19:24:43.470Z] [runtime-status] [5882] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-admin" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2020-01-15T19:24:43.493Z] [worker-~diagnostic~-13cbcb95-5099-4927-9cd5-ec2e8a642278]: exited
+[debug] [2020-01-15T19:24:43.494Z] [worker-~diagnostic~-13cbcb95-5099-4927-9cd5-ec2e8a642278]: FINISHED
