@@ -10,7 +10,9 @@ var firebaseConfig = {
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+
+    firebase.initializeApp(firebaseConfig);
+
 
 //event listener
 document.getElementById('signup').addEventListener('submit', submitSignUp)
@@ -61,6 +63,13 @@ function validatePassword() {
     }
 }
 
-
 password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;
+
+
+///// Galería de imágenes /////
+
+
+( () => {
+
+})()
