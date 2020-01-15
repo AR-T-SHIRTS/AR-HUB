@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="datos.xsl"?>
+<AR-HUB>
+
+    <user>
+        <name>Maria</name>
+        <uname>Marisol</uname>
+        <email>marisul@gmail.com</email>
+        <password>sfapasOSIFGNOWU4Hasf</password>
+        <picture>Picture</picture>
+        <phone>111-111-111</phone>
+    </user>
+    <user>
+        <name>Christian</name>
+        <uname>JesusChrist</uname>
+        <email>chris@gmail.com</email>
+        <password>qwo8nr87ngDbndQw9g7n</password>
+        <picture>Picture</picture>
+        <phone>222-222-222</phone>
+    </user>
+    <user>
+        <name>Ruben</name>
+        <uname>RubenBoy</uname>
+        <email>ruben@gmail.com</email>
+        <password>IGBhbi765v8asdb9a67t</password>
+        <picture>Picture</picture>
+        <phone>333-333-333</phone>
+    </user>
+
+
+    <object>
+        <tridimensional>
+            <category>Coches</category>
+            <marker>cocherojo</marker>
+            <creator>RubenBoy</creator>
+        </tridimensional>
+        <marker>
+            <type>cuadrado</type>
+            <image>Imagen</image>
+        </marker>
+    </object>
+
+    <object>
+        <tridimensional>
+            <category>Moda</category>
+            <marker>vestidogala</marker>
+            <creator>JesusChrist</creator>
+        </tridimensional>
+        <marker>
+            <type>cuadrado</type>
+            <image>Imagen</image>
+        </marker>
+    </object>
+
+    <object>
+        <tridimensional>
+            <category>Entretenimiento</category>
+            <marker>glee</marker>
+            <creator>Marisol</creator>
+        </tridimensional>
+        <marker>
+            <type>triangulo</type>
+            <image>Imagen</image>
+        </marker>
+    </object>
+
+    <object>
+        <tridimensional>
+            <category>Coche</category>
+            <marker>cocheamarillo</marker>
+            <creator>RubenBoy</creator>
+        </tridimensional>
+        <marker>
+            <type>circulo</type>
+            <image>Imagen</image>
+        </marker>
+    </object>
+
+
+</AR-HUB>
