@@ -76,3 +76,46 @@
 [info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
 [debug] [2020-01-15T19:24:43.493Z] [worker-~diagnostic~-13cbcb95-5099-4927-9cd5-ec2e8a642278]: exited
 [debug] [2020-01-15T19:24:43.494Z] [worker-~diagnostic~-13cbcb95-5099-4927-9cd5-ec2e8a642278]: FINISHED
+[debug] [2020-01-15T20:46:57.842Z] ----------------------------------------------------------------------
+[debug] [2020-01-15T20:46:57.844Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2020-01-15T20:46:57.844Z] CLI Version:   7.11.0
+[debug] [2020-01-15T20:46:57.844Z] Platform:      linux
+[debug] [2020-01-15T20:46:57.845Z] Node Version:  v12.14.1
+[debug] [2020-01-15T20:46:57.852Z] Time:          Wed Jan 15 2020 20:46:57 GMT+0000 (Western European Standard Time)
+[debug] [2020-01-15T20:46:57.852Z] ----------------------------------------------------------------------
+[debug] [2020-01-15T20:46:57.852Z] 
+[debug] [2020-01-15T20:46:57.885Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-15T20:46:57.886Z] > authorizing via signed-in user
+[debug] [2020-01-15T20:46:57.886Z] [iam] checking project ar-hub-6c9e7 for permissions ["firebase.projects.get"]
+[debug] [2020-01-15T20:46:57.887Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-01-15T20:46:57.888Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-01-15T20:46:58.121Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-15T20:46:58.128Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/ar-hub-6c9e7:testIamPermissions  
+
+[debug] [2020-01-15T20:46:59.048Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-15T20:46:59.049Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/ar-hub-6c9e7  
+ 
+[debug] [2020-01-15T20:46:59.416Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/mnt/c/Users/pmolm/Desarrollo/Web/AR-HUB'...
+[info] 
+[debug] [2020-01-15T20:46:59.420Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/ar-hub-6c9e7/webApps/-/config  
+ 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "12"
+[info] ✔  functions: Emulator started at http://localhost:5001
+[debug] [2020-01-15T20:47:00.283Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "/mnt/c/Users/pmolm/Desarrollo/Web/AR-HUB/functions" for Cloud Functions...
+[debug] [2020-01-15T20:47:00.410Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-01-15T20:47:00.411Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-01-15T20:47:00.411Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-01-15T20:47:00.411Z] [worker-~diagnostic~-ce11fb9d-724d-42db-960f-dad7ecb056aa]: Assigning socketPath: /tmp/fire_emu_272.sock
+[debug] [2020-01-15T20:47:00.412Z] [worker-~diagnostic~-ce11fb9d-724d-42db-960f-dad7ecb056aa]: BUSY
+[info] i  hosting: Serving hosting files from: src
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2020-01-15T20:47:00.720Z] [runtime-status] [272] Functions runtime initialized. {"cwd":"/mnt/c/Users/pmolm/Desarrollo/Web/AR-HUB/functions","node_version":"12.14.1"}
+[debug] [2020-01-15T20:47:00.720Z] [runtime-status] [272] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[warn] ⚠  The Cloud Functions emulator requires the module "firebase-admin" to be installed. This package is in your package.json, but it's not available. You probably need to run "npm install" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2020-01-15T20:47:00.735Z] [worker-~diagnostic~-ce11fb9d-724d-42db-960f-dad7ecb056aa]: exited
+[debug] [2020-01-15T20:47:00.735Z] [worker-~diagnostic~-ce11fb9d-724d-42db-960f-dad7ecb056aa]: FINISHED

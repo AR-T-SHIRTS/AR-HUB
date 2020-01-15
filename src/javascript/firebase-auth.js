@@ -25,15 +25,13 @@ function submitSignIn(e) {
     var password = getInputVal('passwords');
     const auth = firebase.auth();
 
-    firebase.analytics().logEvent('notification_received');
 
     auth.signOut().catch(e => console.log(e.message));
 
     const promise = auth.signInWithEmailAndPassword(email, password);
     promise
-        .then(e => window.location = 'models_and_markers.html')
+        .then(e => window.location = 'models_and_markers.html', firebase.analytics().logEvent('AR-HUB_sign_in', { mail: email }))
         .catch(e => alert(e.message));
-
 }
 
 function submitSignUp(e) {
@@ -45,7 +43,7 @@ function submitSignUp(e) {
 
     const promise = auth.createUserWithEmailAndPassword(email, password);
     promise
-        .then(e => $('#signUpModal').modal('hide'))
+        .then(e => $('#signUpModal').modal('hide'), firebase.analytics().logEvent('AR-HUB_new_user_created',{mail: email}))
         .catch(e => alert(e.message));
 
 }
